@@ -18,10 +18,6 @@ variable "bastion-image-id" {
   type = string
 }
 
-variable "bastion-nat-ip-address" {
-  type = string
-}
-
 variable "bastion-ip-address" {
   type = string
 }
