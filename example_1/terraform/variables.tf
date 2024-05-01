@@ -33,3 +33,4 @@ variable "internal-bastion-segment-CIDR" {
 variable "internal-bastion-sg-ingress-CIDR" {
   type = string
 }
+

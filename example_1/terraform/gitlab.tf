@@ -1,7 +1,8 @@
-resource "yandex_compute_instance" "compute-instance" {
-  description = each.key
+resource "yandex_compute_instance" "gitlab" {
+  name        = "gitlab"
   platform_id = "standard-v1"
   zone        = "ru-central1-a"
+  allow_stopping_for_update = true
 
   resources {
     cores  = 2
@@ -20,13 +21,7 @@ resource "yandex_compute_instance" "compute-instance" {
     security_group_ids = ["${yandex_vpc_security_group.internal-bastion-sg.id}"]
   }
 
-  for_each = toset(["ssh-key0.pub",
-                    "ssh-key1.pub",
-                    "ssh-key2.pub",
-                    "ssh-key3.pub",
-                    "ssh-key4.pub",
-                    "ssh-key5.pub" ])
   metadata = {
-    ssh-keys = "ubuntu:${file("~/.ssh/${each.key}")}"
+    ssh-keys = "ubuntu:${file("~/.ssh/gitlab.pub")}"
   }
 }
