@@ -1,5 +1,5 @@
  # Educational projects
- ## This repository is designed to familiarize you with the tools:
+ ## This repository is designed to familiarize with the tools:
 - Terraform
 - Ansible
 - k8s
