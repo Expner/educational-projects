@@ -31,6 +31,6 @@
   }
 
   metadata = {
-    ssh-keys = "ubuntu:${file("~/.ssh/bastion.pub")}"
+    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
 }

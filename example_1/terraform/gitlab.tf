@@ -22,6 +22,6 @@ resource "yandex_compute_instance" "gitlab" {
   }
 
   metadata = {
-    ssh-keys = "ubuntu:${file("~/.ssh/gitlab.pub")}"
+    ssh-keys = "ubuntu:${file("~/.ssh/id_rsa.pub")}"
   }
 }
