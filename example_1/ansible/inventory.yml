@@ -1,0 +1,28 @@
+PUBLIC_HOST:
+  hosts:
+    bastion:
+      ansible_host: bastion.kds4wexp.ru
+
+PRIVATE_HOST:
+  hosts:
+    gitlab:
+      ansible_host: gitlab.private.ru
+
+    vm-0:
+      ansible_host: vm-0.private.ru
+
+    vm-1:
+      ansible_host: vm-1.private.ru
+
+    vm-2:
+      ansible_host: vm-2.private.ru
+
+    vm-3:
+      ansible_host: vm-3.private.ru
+
+    vm-4:
+      ansible_host: vm-4.private.ru
+
+    vm-5:
+      ansible_host: vm-5.private.ru
+
